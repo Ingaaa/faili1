@@ -1,3 +1,10 @@
+<!-- 
+*Visus <font color="#F35151">*</font> aizvietoju ar <span>*<span> un krāsu uzstādīju css failā
+*TextArea noņēmu atribūtu value, jo kaut kas nepatika, un pieliku klāt atribūtus cols="0" rows="0"
+*Noņēmu <center>, jo tas nav atbalstīts HTML5, tā vietā izmantoju CSS
+*Laukam 'Cena' atribūtu disabled nomainīju uz disabled="disabled"
+-->
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -11,38 +18,38 @@
 	<div id="page-wrapper" style="border:1px solid silver;">
 	  <h1>Pasūtījuma forma</h1>
 		<div id="errors" style="color:#EB8282;"></div>
-		<form action="index.html" method="post">
+		<form action="http://naivist.net/form/" method="post">
 			<div class="row">
-				<label>Vārds, Uzvārds: <font color="#F35151">*</font></label>
-				<input type="text" name="full-name" value="" id="full-name" />
-				<div class="clearfloat"></div>
+				<label>Vārds, Uzvārds: <span>*</span></label>
+				<input type="text" name="full-name" value="" id="full-name"/>
+				<!--<div class="clearfloat"></div>-->
 			</div>
 			<div class="row">
-				<label>Telefons numurs: <font color="#F35151">*</font></label>
+				<label>Telefons numurs: <span>*</span></label>
 				<input type="text" name="telefonanr" value="" id="telefonanr" />
-				<div class="clearfloat"></div>
+				<!--<div class="clearfloat"></div>-->
 			</div>
 			<div class="row">
 				<label>Adrese:</label>
 				<input type="text" name="address" value="" id="address" />
-				<div class="clearfloat"></div>
+				<!--<div class="clearfloat"></div>-->
 			</div>
 			<div class="row">
-				<label>Ziņojums: <font color="#F35151">*</font></label>
-				<textarea name="zinojums" value="" id="zinojums" ></textarea>
-				<div class="clearfloat"></div>
+				<label>Ziņojums: <span>*</span></label>
+				<textarea name="zinojums" id="zinojums" cols="0" rows="0"></textarea>
+				<!--<div class="clearfloat"></div>-->
 			</div>
 			<div class="row order">
-				<label>Pasūtījums: <font color="#F35151">*</font></label>
-				Cena: <input type="text" name="price" value="10" id="price" disabled />
+				<label>Pasūtījums: <span>*</span></label>
+				Cena: <input type="text" name="price" value="10" id="price" disabled="disabled"/>
 				Daudzums: <input type="text" name="quantity" value="1" id="quantity" />
 				= <span id="order-rezultats"></span> Ls
-				<div class="clearfloat"></div>
+				<!--<div class="clearfloat"></div>-->
 			</div>
-			<div class="row">
-				<center>
+			<div class="row" id="center">
+				
 					<a href="#" onclick="validateForm() ? window.document.forms[0].submit() : false" id="submit">Sūtīt &rarr;</a>
-				</center>
+				
 			</div>
 		</form>
 	</div>
