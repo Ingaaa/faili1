@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>EDU</title>
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+	<link rel="stylesheet" href="base.css" type="text/css" />
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="base.js"></script>
+</head>
+<body>
+	<div id="page-wrapper" style="border:1px solid silver;">
+	  <h1>Pasūtījuma forma</h1>
+		<div id="errors" style="color:#EB8282;"></div>
+		<form action="index.html" method="post">
+			<div class="row">
+				<label>Vārds, Uzvārds: <font color="#F35151">*</font></label>
+				<input type="text" name="full-name" value="" id="full-name" />
+				<div class="clearfloat"></div>
+			</div>
+			<div class="row">
+				<label>Telefons numurs: <font color="#F35151">*</font></label>
+				<input type="text" name="telefonanr" value="" id="telefonanr" />
+				<div class="clearfloat"></div>
+			</div>
+			<div class="row">
+				<label>Adrese:</label>
+				<input type="text" name="address" value="" id="address" />
+				<div class="clearfloat"></div>
+			</div>
+			<div class="row">
+				<label>Ziņojums: <font color="#F35151">*</font></label>
+				<textarea name="zinojums" value="" id="zinojums" ></textarea>
+				<div class="clearfloat"></div>
+			</div>
+			<div class="row order">
+				<label>Pasūtījums: <font color="#F35151">*</font></label>
+				Cena: <input type="text" name="price" value="10" id="price" disabled />
+				Daudzums: <input type="text" name="quantity" value="1" id="quantity" />
+				= <span id="order-rezultats"></span> Ls
+				<div class="clearfloat"></div>
+			</div>
+			<div class="row">
+				<center>
+					<a href="#" onclick="validateForm() ? window.document.forms[0].submit() : false" id="submit">Sūtīt &rarr;</a>
+				</center>
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
