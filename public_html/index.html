@@ -1,10 +1,3 @@
-<!-- 
-*Visus <font color="#F35151">*</font> aizvietoju ar <span>*<span> un krāsu uzstādīju css failā
-*TextArea noņēmu atribūtu value, jo kaut kas nepatika, un pieliku klāt atribūtus cols="0" rows="0"
-*Noņēmu <center>, jo tas nav atbalstīts HTML5, tā vietā izmantoju CSS
-*Laukam 'Cena' atribūtu disabled nomainīju uz disabled="disabled"
--->
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -15,8 +8,9 @@
 	<script type="text/javascript" src="base.js"></script>
 </head>
 <body>
-	<div id="page-wrapper" style="border:1px solid silver;">
+	<div id="page-wrapper">
 	  <h1>Pasūtījuma forma</h1>
+          <div id="form-wrapper">
 		<div id="errors" style="color:#EB8282;"></div>
 		<form action="http://naivist.net/form/" method="post">
 			<div class="row">
@@ -36,7 +30,7 @@
 			</div>
 			<div class="row">
 				<label>Ziņojums: <span>*</span></label>
-				<textarea name="zinojums" id="zinojums" cols="0" rows="0"></textarea>
+				<textarea name="zinojums" id="zinojums" cols="30" rows="3"></textarea>
 				<!--<div class="clearfloat"></div>-->
 			</div>
 			<div class="row order">
@@ -52,7 +46,16 @@
 				
 			</div>
 		</form>
+          </div>
 	</div>
 
 </body>
 </html>
+
+
+<!-- 
+*Visus <font color="#F35151">*</font> aizvietoju ar <span>*<span> un krāsu uzstādīju css failā
+*TextArea noņēmu atribūtu value, jo kaut kas nepatika un pieliku klāt rows=3 un cols=30, lai bez kļūdām validētos kā XHTML 1.0 Transitional(šeit cols neko nemaina, jo css failā tāpat tiek uzstādīts platums)
+*Noņēmu <center>, jo tas nav atbalstīts HTML5, tā vietā izmantoju CSS, kaut gan šeit tas nav pārāk būtiski jo tiek izmantots XHTML 1.0 Transitional (tāpat ar <font>)
+*Laukam 'Cena' atribūtu disabled nomainīju uz disabled="disabled"
+-->
