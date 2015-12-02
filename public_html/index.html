@@ -5,45 +5,46 @@
 	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
 	<link rel="stylesheet" href="base.css" type="text/css" />
 	<script type="text/javascript" src="jquery.js"></script>
-	<script type="text/javascript" src="base.js"></script>
+	<!--<script type="text/javascript" src="base.js"></script>-->
+        <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="base2.js"></script>
 </head>
 <body>
 	<div id="page-wrapper">
 	  <h1>Pasūtījuma forma</h1>
           <div id="form-wrapper">
 		<div id="errors" style="color:#EB8282;"></div>
-		<form action="http://naivist.net/form/" method="post">
+		<form action="http://naivist.net/form/" method="post" id="order_form">
 			<div class="row">
 				<label>Vārds, Uzvārds: <span>*</span></label>
-				<input type="text" name="full-name" value="" id="full-name"/>
-				<!--<div class="clearfloat"></div>-->
+				<input type="text" name="fullname" value="" id="fullname"/>
+				<div class="clearfloat"></div>
 			</div>
 			<div class="row">
 				<label>Telefons numurs: <span>*</span></label>
 				<input type="text" name="telefonanr" value="" id="telefonanr" />
-				<!--<div class="clearfloat"></div>-->
+				<div class="clearfloat"></div>
 			</div>
 			<div class="row">
-				<label>Adrese:</label>
+				<label>Adrese: <span>*</span></label>
 				<input type="text" name="address" value="" id="address" />
-				<!--<div class="clearfloat"></div>-->
+				<div class="clearfloat"></div>
 			</div>
 			<div class="row">
 				<label>Ziņojums: <span>*</span></label>
 				<textarea name="zinojums" id="zinojums" cols="30" rows="3"></textarea>
-				<!--<div class="clearfloat"></div>-->
+				<div class="clearfloat"></div>
 			</div>
 			<div class="row order">
 				<label>Pasūtījums: <span>*</span></label>
 				Cena: <input type="text" name="price" value="10" id="price" disabled="disabled"/>
 				Daudzums: <input type="text" name="quantity" value="1" id="quantity" />
 				= <span id="order-rezultats"></span> Ls
-				<!--<div class="clearfloat"></div>-->
+				<div class="clearfloat"></div>
 			</div>
 			<div class="row" id="center">
-				
-					<a href="#" onclick="validateForm() ? window.document.forms[0].submit() : false" id="submit">Sūtīt &rarr;</a>
-				
+                                <button type="submit" id="submit">Sūtīt &rarr;</button>
+				<!--<a href="#" onclick="validateForm() ? window.document.forms[0].submit() : false" id="submit">Sūtīt &rarr;</a>-->	
 			</div>
 		</form>
           </div>

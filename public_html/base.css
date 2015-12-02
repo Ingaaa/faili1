@@ -5,13 +5,14 @@ h1 {color:antiquewhite; text-shadow: 1px 1px 4px rgb(0,0,0); background-color: r
 .row input[type=text]{width:230px;padding:3px;border:1px solid #777777;border-radius: 3px; background-color: antiquewhite;}
 .order input[type=text]{width:50px; border-radius: 3px;}
 textarea {width:230px;padding:3px;border:1px solid #777777; background-color: antiquewhite;border-radius: 3px;}
-#submit {color: antiquewhite; background-color: rgba(0,0,0,0.4); text-decoration:none;display:inline-block;padding:6px 10px;border-radius: 3px;}
+#submit {color: antiquewhite; background-color: rgba(0,0,0,0.4); text-decoration:none;display:inline-block;padding:6px 10px;border-radius: 3px; border:0;}
 label span { color:#F35151}
 #center{text-align:center;}
 #form-wrapper{width: 90%; margin: 0 auto;}
 body {background-image: url("symphony.png"); background-repeat: repeat;}
-/*Neredzēju jēgu no clearfloat klases, tāpēc noņēmu
 .clearfloat {clear:both;height:0;font-size: 1px;line-height: 0px;}
+.error {color:#F35151;border-color: #F35151;}
 
+/*
 Pieliku klāt vēl kaut ko, lai labāk izskatītos
 */
